@@ -7,6 +7,9 @@ of how Cassandra shards row keys we decided to shard column keys.  With this sch
 you can still use the Cassandra Random Partitioner and get range queries for
 keys.  Our goal is to support 100's of millions of keys across a Cassandra cluster.
 
+### Download
+[earnstone-index-0.1-all.zip](https://github.com/coreyhulen/blog/raw/master/earnstone-index-0.1-all.zip)
+
 ### How it Works
 For the simple case lets consider the index keys to be uniquie (or mostly unique)
 and the value for each key is 1000 + key.  Lets say we want to index the evens list
@@ -61,14 +64,4 @@ isn't any extra query to Cassandra.
 *   To fulfill range query requests the algorithm only looks at 1 addition shard (this might
     change depending on needs).  So if the current shard and the next shard have less than
     the limit you quieried for then you will not get back a full limit of keys.
-
-### Maven repository
-We have a github hosted Maven repository located [here](https://github.com/earnstone/maven-repo).
-To use this repository include the following tag in your pom.xml
-
-    <repositories>
-        <repository>
-            <id>earnstone-repo</id>
-            <url>https://github.com/earnstone/maven-repo/raw/master/releases</url>
-        </repository>
-    </repositories>
+    
