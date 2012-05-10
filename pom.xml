@@ -1,0 +1,100 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.earnstone.index</groupId>
+	<artifactId>eindex</artifactId>
+	<version>0.3-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>eindex</name>
+	<description>Eindex is a component for creating sharded column indexes using Cassandra.</description>
+	<url>https://github.com/earnstone/eindex</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<issueManagement>
+		<system>Github Issues</system>
+		<url>https://github.com/earnstone/eindex/issues</url>
+	</issueManagement>
+	<inceptionYear>2011</inceptionYear>
+	<scm>
+		<connection>scm:git:git@github.com:earnstone/eindex.git</connection>
+		<developerConnection>scm:git:git@github.com:earnstone/eindex.git</developerConnection>
+		<url>scm:git:git@github.com:earnstone/eindex.git</url>
+	</scm>
+	<distributionManagement>
+		<repository>
+			<id>repo</id>
+			<url>file:///maven-repo/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshot-repo</id>
+			<url>file:///maven-repo/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+	<organization>
+		<name>Earnstone Corporation</name>
+		<url>http://www.earnstone.com</url>
+	</organization>
+	<build>
+		<plugins>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cassandra</groupId>
+			<artifactId>cassandra-all</artifactId>
+			<version>0.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>me.prettyprint</groupId>
+			<artifactId>hector-core</artifactId>
+			<version>0.7.0-28</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cassandra</groupId>
+			<artifactId>cassandra-javautils</artifactId>
+			<version>0.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.15</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.mail</groupId>
+					<artifactId>mail</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.jms</groupId>
+					<artifactId>jms</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jdmk</groupId>
+					<artifactId>jmxtools</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jmx</groupId>
+					<artifactId>jmxri</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+	</dependencies>
+</project>
